@@ -1,7 +1,6 @@
 {% extends "externa/partial.twig.php" %}
 
 {% block body %}
-
 <div class="main-container">
     <div class="max-width vertical-center">
 
@@ -38,5 +37,4 @@
         </form>
     </div>
 </div>
-
 {% endblock %}

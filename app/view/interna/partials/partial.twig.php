@@ -7,6 +7,7 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{BASE}}assets/css/conta.css">
     <link rel="stylesheet" href="{{BASE}}assets/css/unsemantic-grid-responsive.css">
+    <link rel="shortcut icon" href="{{BASE}}assets/img/favicon.ico">
 </head>
 
 <body>
@@ -16,11 +17,11 @@
     <section>
         <div class="box max-width">
             <div class="box-header">
-                <p>olá, <span class="bold">{{USER_NAME}}</span></p>
+                <p>Olá, <span class="bold">{{USER_NAME}}</span></p>
             </div>
 
             <div class="box-body">
-                <h1>{% block title %}{% endblock %}</h1>
+                <h1>{{block('title')}}</h1>
                 {% block body %}{% endblock %}
             </div>
         </div>

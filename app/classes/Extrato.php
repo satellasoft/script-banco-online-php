@@ -2,7 +2,7 @@
 
 namespace app\classes;
 
-class SaldoController
+class ExtratoController
 {
     public function __construct()
     {

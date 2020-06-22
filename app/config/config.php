@@ -1,11 +1,13 @@
 <?php
 
+//Pasta na qual o projeto está hospedado
 define('BASE', '/banco-online-php/');
 
+//Pasta onde os arquivos vão ser salvos
 define('DATA_PATH', 'dados');
-//?url=saldo
 
-    //'URL' => 'Controladora@Método'
+//?url=saldo
+//'URL' => 'Controladora@Método'
 $router = [
     //View
     'home' => 'ContaController@home',

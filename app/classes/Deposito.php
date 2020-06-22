@@ -2,7 +2,7 @@
 
 namespace app\classes;
 
-class SaldoController
+class DepositoController
 {
     public function __construct()
     {

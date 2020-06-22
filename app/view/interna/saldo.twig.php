@@ -1,6 +1,6 @@
 {% extends 'interna/partials/partial.twig.php' %}
 
-{% block title %}Saldo{% endblock %}
+{% block title %}Saldo - BOD{% endblock %}
 
 {% block body %}
 
