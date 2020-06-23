@@ -13,7 +13,6 @@ class ContaController extends Controller
     }
 
     //#### VIEW ####
-
     public function home()
     {
         $this->view('interna/home');
@@ -21,7 +20,7 @@ class ContaController extends Controller
 
     public function saldo()
     {
-        $saldo = 1700.00;
+        $saldo = 1800.00;
 
         $this->view('interna/saldo', [
             'saldo' => $saldo
