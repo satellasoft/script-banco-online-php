@@ -30,6 +30,7 @@
             </div>
 
             <div class="grid-100 align-right">
+                <a href="{{BASE}}" style="margin-right:10px;">Login</a>
                 <button class="btn" type="submit">Criar</button>
             </div>
 

@@ -8,11 +8,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
+p{
+    margin: 5px 0;
+}
+
 .bold {
     font-weight: bold;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
@@ -45,33 +49,114 @@ nav ul {
     padding: 0;
 }
 
-nav ul li{
+nav ul li {
     display: inline;
 }
 
-nav ul li a{
+nav ul li a {
     display: inline-block;
     padding: 20px;
     color: rgb(232, 241, 243);
-    text-decoration: none;   
+    text-decoration: none;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     background-color: rgb(236, 241, 245);
     color: rgb(66, 86, 102);
 }
 
-nav ul li:last-child > a{
+nav ul li:last-child>a {
     color: rgb(206, 90, 90);
     float: right;
 }
 
-nav ul li:first-child > a{
+nav ul li:first-child>a {
     color: rgb(0, 183, 255);
     font-weight: bold;
 }
 
-.saldo{
+.saldo-medium {
+    text-align: center;
+    padding: 25px 0;
+    font-size: 2em;
+}
+
+.saldo {
+    text-align: center;
     padding: 25px 0;
     font-size: 3em;
+}
+
+.ar {
+    text-align: right;
+}
+
+input[type='text'],
+input[type='email'] {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+a {
+    color: rgb(5, 150, 218);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(218, 5, 5);
+    text-decoration: none;
+}
+
+.btn,
+input[type='submit'] {
+    background-color: rgb(5, 150, 218);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.btn:hover,
+input[type='submit']:hover {
+    background-color: rgb(218, 5, 5);
+}
+
+label {
+    display: block;
+}
+
+.large-padding {
+    padding: 25px;
+}
+
+/*ALERT*/
+
+.alert {
+    padding: 10px;
+    font-size: 1.1em;
+    background-color: #fff;
+    margin: 10px 0;
+}
+
+.alert-warning{
+    background-color: rgb(235, 174, 62);
+    color: rgb(97, 66, 7);
+}
+
+.alert-info{
+    background-color: rgb(119, 172, 241);
+    color: rgb(7, 64, 97);
+}
+
+.alert-success{
+    background-color: rgb(109, 200, 86);
+    color: rgb(12, 71, 25);
+}
+
+.alert-danger{
+    background-color: rgb(200, 86, 86);
+    color: rgb(71, 12, 12);
 }

@@ -42,11 +42,11 @@ function validaCPF($cpf)
 {
     // Extrai somente os números
     $cpf = preg_replace('/[^0-9]/is', '', $cpf);
-
     // Verifica se foi informado todos os digitos corretamente
     if (strlen($cpf) != 11) {
         return false;
     }
+
 
     // Verifica se foi informada uma sequência de digitos repetidos. Ex: 111.111.111-11
     if (preg_match('/(\d)\1{10}/', $cpf)) {
@@ -74,7 +74,7 @@ function validaCPF($cpf)
  * @param  string $mode Modo de escrita.
  * @return void
  */
-function gravar(string $path, string $data, string $mode = 'w')
+function gravar(string $path, string $data, string $mode = 'w+')
 {
     $fp = fopen($path, $mode);
     fwrite($fp, $data);
@@ -90,6 +90,9 @@ function gravar(string $path, string $data, string $mode = 'w')
  */
 function ler(string $path, string $mode = 'r')
 {
+    if (!file_exists($path) || filesize($path) <= 0)
+        return;
+
     $fp = fopen($path, $mode);
     $content = fread($fp, filesize($path));
     fclose($fp);
@@ -116,11 +119,19 @@ function criarDiretorio(string $path)
  */
 function security()
 {
+    session_start();
+
     if (!isset($_SESSION['logado']) || !$_SESSION['logado']) {
-        header('Location: ' . BASE);
+        header('Location: ' . BASE . '?url=negado');
     }
 
     if (!isset($_SESSION['ip']) || $_SESSION['ip'] != $_SERVER['REMOTE_ADDR']) {
-        header('Location: ' . BASE);
+        header('Location: ' . BASE . '?url=negado');
     }
+}
+
+function validarDinheiro($valor)
+{
+    $valor =  str_replace('.', '', $valor);
+    return str_replace(',', '.', $valor);
 }

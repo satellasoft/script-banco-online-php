@@ -3,7 +3,7 @@
 {% block body %}
 <div class="main-container">
     <div class="max-width vertical-center">
-        <form action="{{BASE}}?url=auth" method="post">
+        <form action="{{BASE}}?url=auth" method="post" id="frmLogin">
             <p>Informe seu CPF para continuar</p>
             <input type="text" name="txtCpf" id="txtCpf">
             <div class="ar">

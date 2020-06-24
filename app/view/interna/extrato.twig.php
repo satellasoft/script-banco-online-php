@@ -5,7 +5,7 @@
 {% block body %}
 
 <div>
-
+    {{extrato | raw}}
 </div>
 
 {% endblock %}
